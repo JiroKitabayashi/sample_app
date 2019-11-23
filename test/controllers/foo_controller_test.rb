@@ -2,12 +2,12 @@ require 'test_helper'
 
 class FooControllerTest < ActionDispatch::IntegrationTest
   test "should get bar" do
-    get foo_bar_url
+    get bar_path
     assert_response :success
   end
 
   test "should get baz" do
-    get foo_baz_url
+    get baz_path
     assert_response :success
   end
 

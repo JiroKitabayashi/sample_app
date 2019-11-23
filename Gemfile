@@ -6,6 +6,7 @@ ruby '2.6.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
+gem 'bootstrap-sass', '3.3.7'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -32,6 +33,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  
 end
 
 group :development do
@@ -52,6 +54,7 @@ group :test do
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'rails-controller-testing'
   gem 'webdrivers'
 end
 
