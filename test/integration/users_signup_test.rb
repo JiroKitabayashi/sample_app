@@ -18,7 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   test "valid signup information" do
     get signup_path
     assert_difference 'User.count' do
-      post signup_path, params{ user: { name: "sample",
+      post signup_path, params: { user: { name: "sample",
                                         email: "sample@test.org",
                                         password: "123456",
                                         password_confirmation: "123456"}  }
