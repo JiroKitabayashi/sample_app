@@ -39,3 +39,5 @@ $ rails server
 
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
 を参考にしてください。  
+
+7.25までやった 19/01/12
