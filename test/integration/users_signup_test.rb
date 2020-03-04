@@ -31,7 +31,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
   test "collect form path" do
     get signup_path
-    assert_select 'form[action="/signup"]'
+    assert_select 'form[action="/users"]'
   end
 
 end
