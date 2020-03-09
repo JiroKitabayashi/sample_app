@@ -5,10 +5,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless user.!activated
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated:true).pagi nate(page: params[:page])
   end
 
   def new
@@ -18,18 +19,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # 実装は終わっていないことに注意!
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
-      # redirect_to user_url(@user)を推察して実行してくれる
-      # 保存の成功をここで扱う。
+      @user.send_activation_email
+      flash[:info] =  "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
   end
 
-  def edit
-  end
 
   def update
     if @user.update(user_params)
