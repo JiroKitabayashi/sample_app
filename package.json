@@ -10,7 +10,12 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/JiroKitabayashi/sample_app.git",
+  "author": "JiroKitabayashi <jiro.kitabayashi@gmail.com>",
+  "license": "MIT"
 }
